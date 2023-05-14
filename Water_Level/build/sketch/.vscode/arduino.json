@@ -1,0 +1,7 @@
+#line 1 "D:\\EDUTIC\\Water_Level\\.vscode\\arduino.json"
+{
+    "board": "esp32:esp32:esp32",
+    "port": "COM1",
+    "output": "./build",
+    "sketch": "WATER_LEVEL.ino"
+}

@@ -1,0 +1,6 @@
+{
+    "board": "esp32:esp32:esp32",
+    "port": "COM1",
+    "output": "./build",
+    "sketch": "WATER_LEVEL.ino"
+}
