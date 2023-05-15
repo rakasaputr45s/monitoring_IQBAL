@@ -11,13 +11,8 @@
   },
   {
     "Sourcefile": "D:\\Monitoring Iqbal\\PZEM_017\\build\\sketch\\PZEM_017.ino.cpp",
-    "Include": "ModbusMaster.h",
-    "Includepath": "C:\\Users\\rakas\\OneDrive\\eidit\\Dokumen\\Arduino\\libraries\\ModbusMaster\\src"
-  },
-  {
-    "Sourcefile": "D:\\Monitoring Iqbal\\PZEM_017\\build\\sketch\\PZEM_017.ino.cpp",
-    "Include": "LiquidCrystal.h",
-    "Includepath": "C:\\Users\\rakas\\OneDrive\\eidit\\Dokumen\\Arduino\\libraries\\LiquidCrystal\\src"
+    "Include": "ModbusMasterPzem017.h",
+    "Includepath": "C:\\Users\\rakas\\OneDrive\\eidit\\Dokumen\\Arduino\\libraries\\ModbusMasterPzem017-master\\src"
   },
   {
     "Sourcefile": "D:\\Monitoring Iqbal\\PZEM_017\\build\\sketch\\PZEM_017.ino.cpp",
@@ -25,12 +20,7 @@
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\rakas\\OneDrive\\eidit\\Dokumen\\Arduino\\libraries\\ModbusMaster\\src\\ModbusMaster.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Users\\rakas\\OneDrive\\eidit\\Dokumen\\Arduino\\libraries\\LiquidCrystal\\src\\LiquidCrystal.cpp",
+    "Sourcefile": "C:\\Users\\rakas\\OneDrive\\eidit\\Dokumen\\Arduino\\libraries\\ModbusMasterPzem017-master\\src\\ModbusMasterPzem017.cpp",
     "Include": "",
     "Includepath": null
   }

@@ -130,8 +130,6 @@ D:\Monitoring\ Iqbal\PZEM_017\build\sketch\PZEM_017.ino.cpp.o: \
  C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8/tools/sdk/esp32/include/spi_flash/include/esp_spi_flash.h \
  C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8/tools/sdk/esp32/include/spi_flash/include/esp_spi_flash_counters.h \
  C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8/tools/sdk/esp32/include/esp_hw_support/include/soc/esp32/spiram.h \
- C:\Users\rakas\OneDrive\eidit\Dokumen\Arduino\libraries\ModbusMaster\src/ModbusMaster.h \
- C:\Users\rakas\OneDrive\eidit\Dokumen\Arduino\libraries\ModbusMaster\src/util/crc16.h \
- C:\Users\rakas\OneDrive\eidit\Dokumen\Arduino\libraries\ModbusMaster\src/util/word.h \
- C:\Users\rakas\OneDrive\eidit\Dokumen\Arduino\libraries\LiquidCrystal\src/LiquidCrystal.h \
- C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8\cores\esp32/Print.h
+ C:\Users\rakas\OneDrive\eidit\Dokumen\Arduino\libraries\ModbusMasterPzem017-master\src/ModbusMasterPzem017.h \
+ C:\Users\rakas\OneDrive\eidit\Dokumen\Arduino\libraries\ModbusMasterPzem017-master\src/util/crc16.h \
+ C:\Users\rakas\OneDrive\eidit\Dokumen\Arduino\libraries\ModbusMasterPzem017-master\src/util/word.h
