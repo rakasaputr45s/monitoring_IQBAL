@@ -1,4 +1,4 @@
-D:\EDUTIC\Soil_Moisture\build\core\esp32-hal-gpio.c.o: \
+D:\Monitoring\ Iqbal\Soil_Moisture\build\core\esp32-hal-gpio.c.o: \
  C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8\cores\esp32\esp32-hal-gpio.c \
  C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8\cores\esp32\esp32-hal-gpio.h \
  C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8\cores\esp32\esp32-hal.h \

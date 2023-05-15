@@ -1,4 +1,4 @@
-D:\EDUTIC\Soil_Moisture\build\core\wiring_pulse.c.o: \
+D:\Monitoring\ Iqbal\Soil_Moisture\build\core\wiring_pulse.c.o: \
  C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8\cores\esp32\wiring_pulse.c \
  C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8\cores\esp32\wiring_private.h \
  C:\Users\rakas\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.8\cores\esp32\Arduino.h \

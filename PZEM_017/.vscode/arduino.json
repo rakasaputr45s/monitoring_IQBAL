@@ -1,0 +1,8 @@
+{
+    "port": "COM1",
+    "configuration": "JTAGAdapter=bridge,PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=115200,LoopCore=1,EventsCore=1,DebugLevel=none,EraseFlash=all",
+    "board": "esp32:esp32:esp32",
+    "programmer": "esptool",
+    "output": "./build",
+    "sketch": "PZEM_017.ino"
+}

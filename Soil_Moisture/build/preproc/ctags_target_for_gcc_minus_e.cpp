@@ -1,4 +1,4 @@
-# 1 "D:\\EDUTIC\\Soil_Moisture\\Soil_Moisture.ino"
+# 1 "D:\\Monitoring Iqbal\\Soil_Moisture\\Soil_Moisture.ino"
 /*
 
  * This ESP32 code is created by esp32io.com
@@ -12,7 +12,7 @@
  * For more detail (instruction and wiring diagram), visit https://esp32io.com/tutorials/esp32-soil-moisture-sensor
 
  */
-# 12 "D:\\EDUTIC\\Soil_Moisture\\Soil_Moisture.ino"
+# 12 "D:\\Monitoring Iqbal\\Soil_Moisture\\Soil_Moisture.ino"
 void setup() {
   Serial.begin(9600);
 }

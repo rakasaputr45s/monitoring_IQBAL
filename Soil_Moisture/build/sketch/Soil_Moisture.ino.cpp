@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "D:\\EDUTIC\\Soil_Moisture\\Soil_Moisture.ino"
+#line 1 "D:\\Monitoring Iqbal\\Soil_Moisture\\Soil_Moisture.ino"
 /*
  * This ESP32 code is created by esp32io.com
  *
@@ -11,11 +11,11 @@
 #define AOUT_PIN 34          // ESP32 pin GIOP34 (ADC0) that connects to AOUT pin of moisture sensor
 #define THRESHOLD 1000       // CHANGE YOUR THRESHOLD HERE
 
-#line 12 "D:\\EDUTIC\\Soil_Moisture\\Soil_Moisture.ino"
+#line 12 "D:\\Monitoring Iqbal\\Soil_Moisture\\Soil_Moisture.ino"
 void setup();
-#line 16 "D:\\EDUTIC\\Soil_Moisture\\Soil_Moisture.ino"
+#line 16 "D:\\Monitoring Iqbal\\Soil_Moisture\\Soil_Moisture.ino"
 void loop();
-#line 12 "D:\\EDUTIC\\Soil_Moisture\\Soil_Moisture.ino"
+#line 12 "D:\\Monitoring Iqbal\\Soil_Moisture\\Soil_Moisture.ino"
 void setup() {
   Serial.begin(9600);
 }

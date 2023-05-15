@@ -1,4 +1,4 @@
-#line 1 "D:\\EDUTIC\\Soil_Moisture\\.vscode\\arduino.json"
+#line 1 "D:\\Monitoring Iqbal\\Soil_Moisture\\.vscode\\arduino.json"
 {
     "configuration": "JTAGAdapter=default,PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,LoopCore=1,EventsCore=1,DebugLevel=warn,EraseFlash=none",
     "board": "esp32:esp32:esp32",

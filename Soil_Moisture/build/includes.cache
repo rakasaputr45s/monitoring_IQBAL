@@ -10,7 +10,7 @@
     "Includepath": "C:\\Users\\rakas\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.8\\variants\\esp32"
   },
   {
-    "Sourcefile": "D:\\EDUTIC\\Soil_Moisture\\build\\sketch\\Soil_Moisture.ino.cpp",
+    "Sourcefile": "D:\\Monitoring Iqbal\\Soil_Moisture\\build\\sketch\\Soil_Moisture.ino.cpp",
     "Include": "",
     "Includepath": null
   }
