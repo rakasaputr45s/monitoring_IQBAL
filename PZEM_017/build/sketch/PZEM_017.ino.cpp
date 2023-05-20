@@ -11,7 +11,6 @@ static char satu = 1;
 static char dua  = 2;
 
 ModbusMaster nodeSatu;
-ModbusMaster nodeDua;
 
 float PZEMVoltage[2];
 float PZEMCurrent[2];
@@ -22,30 +21,30 @@ int resetstate;
 unsigned long OnTime;
 unsigned long OffTime;
 
-#line 23 "D:\\Muhammad Raka Saputra\\project\\Monitoring Iqbal\\PZEM_017\\PZEM_017.ino"
+#line 22 "D:\\Muhammad Raka Saputra\\project\\Monitoring Iqbal\\PZEM_017\\PZEM_017.ino"
 void setup();
-#line 35 "D:\\Muhammad Raka Saputra\\project\\Monitoring Iqbal\\PZEM_017\\PZEM_017.ino"
+#line 33 "D:\\Muhammad Raka Saputra\\project\\Monitoring Iqbal\\PZEM_017\\PZEM_017.ino"
 void loop();
 #line 84 "D:\\Muhammad Raka Saputra\\project\\Monitoring Iqbal\\PZEM_017\\PZEM_017.ino"
 void energyreset();
 #line 105 "D:\\Muhammad Raka Saputra\\project\\Monitoring Iqbal\\PZEM_017\\PZEM_017.ino"
 void setShunt(uint8_t slaveAddr);
-#line 23 "D:\\Muhammad Raka Saputra\\project\\Monitoring Iqbal\\PZEM_017\\PZEM_017.ino"
+#line 22 "D:\\Muhammad Raka Saputra\\project\\Monitoring Iqbal\\PZEM_017\\PZEM_017.ino"
 void setup()
 {
   Serial.begin(115200);
   Serial2.begin(9600, SERIAL_8N2);
   setShunt(slaveModul1);
+  delay(1000);
   setShunt(slaveModul2);
   nodeSatu.begin(slaveModul1, Serial2);
-  nodeDua.begin(slaveModul2, Serial2);
-
   delay(1000);
 }
 
 void loop() {
   unsigned long resetcurrentMillis = millis();
 
+nodeSatu.slaveid(slaveModul1);
   uint8_t result;
   result = nodeSatu.readInputRegisters(0x0000, 6);
   if (result != nodeSatu.ku8MBSuccess) Serial.println("Failed to read modul 1");
@@ -53,12 +52,12 @@ void loop() {
     uint32_t tempdouble = 0x00000000;
     PZEMVoltage[satu] = nodeSatu.getResponseBuffer(0x0000) / 100.0;
     PZEMCurrent[satu] = nodeSatu.getResponseBuffer(0x0001) / 100.0;
-    tempdouble =  (nodeSatu.getResponseBuffer(0x0003) << 16) + nodeSatu.getResponseBuffer(0x0002); // get the power value. Power value is consists of 2 parts (2 digits of 16 bits in front and 2 digits of 16 bits at the back) and combine them to an unsigned 32bit
-    PZEMPower[satu] = tempdouble / 10.0; //Divide the value by 10 to get actual power value (as per manual)
-    tempdouble =  (nodeSatu.getResponseBuffer(0x0005) << 16) + nodeSatu.getResponseBuffer(0x0004);  //get the energy value. Energy value is consists of 2 parts (2 digits of 16 bits in front and 2 digits of 16 bits at the back) and combine them to an unsigned 32bit
+    tempdouble =  (nodeSatu.getResponseBuffer(0x0003) << 16) + nodeSatu.getResponseBuffer(0x0002);  // get the power value. Power value is consists of 2 parts (2 digits of 16 bits in front and 2 digits of 16 bits at the back) and combine them to an unsigned 32bit
+    PZEMPower[satu] = tempdouble / 10.0;                                                            // Divide the value by 10 to get actual power value (as per manual)
+    tempdouble =  (nodeSatu.getResponseBuffer(0x0005) << 16) + nodeSatu.getResponseBuffer(0x0004);  // get the energy value. Energy value is consists of 2 parts (2 digits of 16 bits in front and 2 digits of 16 bits at the back) and combine them to an unsigned 32bit
     PZEMEnergy[satu] = tempdouble;
     Serial.println("MODUL 1");
-    Serial.print(PZEMVoltage[satu], 2); //Print Voltage value on Serial Monitor with 1 decimal*/
+    Serial.print(PZEMVoltage[satu], 2);                                                             // Print Voltage value on Serial Monitor with 1 decimal*/
     Serial.print("V   ");
     Serial.print(PZEMCurrent[satu], 2); Serial.print("A   ");
     Serial.print(PZEMPower[satu], 3); Serial.print("W  ");
@@ -67,18 +66,19 @@ void loop() {
   } 
 
   delay(500);
-    result = nodeDua.readInputRegisters(0x0000, 6);
-  if (result != nodeDua.ku8MBSuccess) Serial.println("Failed to read modul 1");
+  nodeSatu.slaveid(slaveModul2);
+  result = nodeSatu.readInputRegisters(0x0000, 6);
+  if (result != nodeSatu.ku8MBSuccess) Serial.println("Failed to read modul 2");
   else  {
     uint32_t tempdouble = 0x00000000;
-    PZEMVoltage[dua] = nodeDua.getResponseBuffer(0x0000) / 100.0;
-    PZEMCurrent[dua] = nodeDua.getResponseBuffer(0x0001) / 100.0;
-    tempdouble =  (nodeDua.getResponseBuffer(0x0003) << 16) + nodeDua.getResponseBuffer(0x0002); // get the power value. Power value is consists of 2 parts (2 digits of 16 bits in front and 2 digits of 16 bits at the back) and combine them to an unsigned 32bit
+    PZEMVoltage[dua] = nodeSatu.getResponseBuffer(0x0000) / 100.0;
+    PZEMCurrent[dua] = nodeSatu.getResponseBuffer(0x0001) / 100.0;
+    tempdouble =  (nodeSatu.getResponseBuffer(0x0003) << 16) + nodeSatu.getResponseBuffer(0x0002); //    get the power value. Power value is consists of 2 parts (2 digits of 16 bits in front and 2 digits of 16 bits at the back) and combine them to an unsigned 32bit
     PZEMPower[dua] = tempdouble / 10.0; //Divide the value by 10 to get actual power value (as per manual)
-    tempdouble =  (nodeDua.getResponseBuffer(0x0005) << 16) + nodeDua.getResponseBuffer(0x0004);  //get the energy value. Energy value is consists of 2 parts (2 digits of 16 bits in front and 2 digits of 16 bits at the back) and combine them to an unsigned 32bit
+    tempdouble =  (nodeSatu.getResponseBuffer(0x0005) << 16) + nodeSatu.getResponseBuffer(0x0004);  //   get the energy value. Energy value is consists of 2 parts (2 digits of 16 bits in front and 2 digits of 16 bits at the back) and combine them to an unsigned 32bit
     PZEMEnergy[dua] = tempdouble;
     Serial.println("MODUL 2");
-    Serial.print(PZEMVoltage[dua], 2); //Print Voltage value on Serial Monitor with 1 decimal*/
+    Serial.print(PZEMVoltage[dua], 2);                                                            //   Print Voltage value on Serial Monitor with 1 decimal*/
     Serial.print("V   ");
     Serial.print(PZEMCurrent[dua], 2); Serial.print("A   ");
     Serial.print(PZEMPower[dua], 3); Serial.print("W  ");
